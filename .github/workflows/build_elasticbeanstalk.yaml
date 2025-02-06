@@ -1,22 +1,19 @@
-name: Build ElasticBeastalk
+name: Deploy App To Elastic Beanstalk
 
 on:
-    push:
-      branches:
-        - main
-      paths:
-        - .github/workflows/build_elasticbeanstalk.yaml
-        - ".github/workflows"
-  
+  push:
+    branches:
+      - main
+
 jobs:
   build: 
-     runs-on: ubuntu-latest
- 
+    runs-on: ubuntu-latest
+
     steps:
     - name: Download build artifact
       uses: actions/download-artifact@v3
       with:
-        name: nodejsbasic
+        name: latihan
     
     - name: Deploy to Elastic Beanstalk
       env:
@@ -36,3 +33,4 @@ jobs:
         aws elasticbeanstalk update-environment \
           --environment-name ${{ secrets.EB_ENV_NAME }} \
           --version-label $VERSION_LABEL
+      
