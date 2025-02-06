@@ -1,4 +1,4 @@
-name: Artifact & Elastic Beanstalk
+name: Artifact & Elastic Beanstalk Nodejs
 
 on:
   push:
