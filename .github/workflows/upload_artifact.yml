@@ -25,7 +25,7 @@ jobs:
       run: zip -r nodejsbasic.zip . -x "node_modules/*" ".env"
 
     - name: Upload build artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: nodejsbasic
         path: nodejsbasic.zip
