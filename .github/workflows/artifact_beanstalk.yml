@@ -19,7 +19,10 @@ jobs:
         node-version: '20'
     
     - name: Install dependencies
-      run: npm install
+      run: |
+        npm install
+        npm install -g pm2
+        npm ci
 
     - name: Build zip
       run: zip -r nodejsbasic.zip . -x "node_modules/*" ".env"
