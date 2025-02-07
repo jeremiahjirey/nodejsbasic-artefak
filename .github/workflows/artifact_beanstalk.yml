@@ -77,4 +77,6 @@ jobs:
         aws elasticbeanstalk update-environment \
           --environment-name ${{ secrets.EB_ENV_NAME }} \
           --version-label $VERSION_LABEL
+
+          eb deploy --staged
       
