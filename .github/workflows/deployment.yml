@@ -33,7 +33,7 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
-        ECR_REGISTRY: 257145219782.dkr.ecr.us-east-1.amazonaws.com/cc-repository #${{ steps.login-ecr.outputs.registry }}
+        ECR_REGISTRY: 257145219782.dkr.ecr.us-east-1.amazonaws.com/cc-repository 
         WORKER_IMAGE_TAG: crudjs-latest
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$WORKER_IMAGE_TAG --build-arg aws_region=${{ env.AWS_REGION }} --build-arg copy_or_mount="copy" -f worker/Dockerfile ./worker
