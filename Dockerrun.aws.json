@@ -1,6 +1,5 @@
 {
     "AWSEBDockerrunVersion": 2,
-    "taskRoleArn": "arn:aws:iam::257145219782:role/LabRole",
     "volumes": [
         {
             "name": "AmazonEfs",
@@ -10,7 +9,10 @@
                 "transitEncryption": "ENABLED",
                 "authorizationConfig": {
                     "accessPointId": "fsap-09a8a0fb927f40fd3",
-                    "iam": "ENABLED"
+                    "iam": {
+                        "name": "LabRole"
+                    }
+                      
                 }
             }
         }
