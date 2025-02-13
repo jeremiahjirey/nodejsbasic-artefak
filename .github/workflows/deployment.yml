@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGGION: us-east-1
-  ECR_REPOSITORY: cc-training
+  ECR_REPOSITORY: cc-repository
 
 jobs:
   build:

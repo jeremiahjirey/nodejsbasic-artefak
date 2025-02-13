@@ -29,7 +29,7 @@
          "enviroment":[
              {
                "name": "DB_HOST",
-               "value": ""
+               "value": "database-1.cp1kqg7xmjf4.us-east-1.rds.amazonaws.com"
              },
              {
                "name": "DB_USER",
@@ -42,6 +42,10 @@
              {
                "name": "DB_DATABASE",
                "value": "crud_db"
+             },
+             {
+                "name": "PORT",
+                "value": 8000
              }
  
          ]
