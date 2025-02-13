@@ -1,5 +1,6 @@
 {
     "AWSEBDockerrunVersion": 2,
+    "taskRoleArn": "arn:aws:iam::257145219782:role/LabRole",
     "volumes": [
         {
             "name": "AmazonEfs",
