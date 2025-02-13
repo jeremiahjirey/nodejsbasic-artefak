@@ -6,7 +6,7 @@
  
      }
  ],
-     "ContainerDefinition": [
+     "containerDefinition": [
          {
          "name": "crud-container",
          "image": "257145219782.dkr.ecr.us-east-1.amazonaws.com/cc-repository:crudjs-latest",
@@ -15,7 +15,7 @@
          "essential": true,
          "mountPoints":[
              {
-               "sourceVolume": "crud-data",
+               "sourceVolume": "crud-container",
                "containerPath": "/var/app/current/nodejsbasic"
              }
          ],
