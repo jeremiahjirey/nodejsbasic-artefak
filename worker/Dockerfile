@@ -1,7 +1,11 @@
 FROM node:latest
 WORKDIR /app
 RUN apt-get update  && apt-get install -y git
-RUN git clone https://github.com/handipradana/nodejsbasic.git .
+# Define EFS Mount Directory
+RUN mkdir -p /app
+# Set volume (AWS ECS akan mount EFS di sini)
+VOLUME ["/app"]
+RUN git clone https://github.com/handipradana/nodejsbasic.git /app
 ARG DB_HOST
 ENV DB_HOST=database-1.cp1kqg7xmjf4.us-east-1.rds.amazonaws.com
 ARG DB_USER

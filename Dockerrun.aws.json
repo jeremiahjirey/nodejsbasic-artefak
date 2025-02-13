@@ -2,7 +2,12 @@
     "AWSEBDockerrunVersion": 2,
     "volumes": [
         {
-            "name": "crud-data"
+            "name": "AmazonEfs",
+            "efsVolumeConfiguration": {
+                "fileSystemId": "fs-03bd3e68367116cc2",
+                "rootDirectory": "/",
+                "transitEncryption": "ENABLED"
+            }
         }
     ],
     "containerDefinitions": [
@@ -14,11 +19,11 @@
             "essential": true,
             "mountPoints": [
                 {
-                    "sourceVolume": "crud-data",
-                    "containerPath": "/var/app/current/nodejsbasic"
+                    "sourceVolume": "AmazonEfs",
+                    "containerPath": "/app"
                 }
             ],
-            "portMappings": [
+            "portMappings": [   
                 {
                     "appProtocol": "http",
                     "containerPort": 8000,
