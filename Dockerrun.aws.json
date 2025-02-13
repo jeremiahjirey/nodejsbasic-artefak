@@ -5,7 +5,7 @@
             "name": "AmazonEfs",
             "efsVolumeConfiguration": {
                 "fileSystemId": "fs-03bd3e68367116cc2",
-                "rootDirectory": "/",
+                "rootDirectory": "/app",
                 "transitEncryption": "ENABLED",
                 "authorizationConfig": {
                     "accessPointId": "fsap-09a8a0fb927f40fd3",
