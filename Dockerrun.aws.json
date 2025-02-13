@@ -4,14 +4,12 @@
         {
             "name": "AmazonEfs",
             "efsVolumeConfiguration": {
-                "fileSystemId": "fs-03bd3e68367116cc2",
+                "fileSystemId": "fsap-05470789c0f66b89b",
                 "rootDirectory": "/app",
                 "transitEncryption": "ENABLED",
                 "authorizationConfig": {
                     "accessPointId": "fsap-09a8a0fb927f40fd3",
-                    "iam": {
-                        "name": "LabRole"
-                    }
+                    "iam": "ENABLED"
                 }
             }
         }
