@@ -9,7 +9,7 @@
      "ContainerDefinition": [
          {
          "name": "crud-container",
-         "image": "",
+         "image": "257145219782.dkr.ecr.us-east-1.amazonaws.com/cc-repository:crudjs-latest",
          "cpu": 1024,
          "memory": 2048,
          "essential": true,
