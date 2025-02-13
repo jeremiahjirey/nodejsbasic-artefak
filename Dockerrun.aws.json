@@ -6,11 +6,7 @@
             "efsVolumeConfiguration": {
                 "fileSystemId": "fs-03bd3e68367116cc2",
                 "rootDirectory": "/app",
-                "transitEncryption": "ENABLED",
-                "authorizationConfig": {
-                    "accessPointId": "fsap-05470789c0f66b89b",
-                    "iam": "ENABLED"
-                }
+                "transitEncryption": "ENABLED"
             }
         }
     ],
