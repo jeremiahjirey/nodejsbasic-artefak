@@ -9,7 +9,9 @@
                 "transitEncryption": "ENABLED",
                 "authorizationConfig": {
                     "accessPointId": "fsap-09a8a0fb927f40fd3",
-                    "iam": "ENABLED"
+                    "iam": {
+                        "name": "LabRole"
+                    }
                 }
             }
         }
