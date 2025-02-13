@@ -1,0 +1,50 @@
+{
+    "AWSEBDockerrunVersion": 2,
+     "volumes": [
+         {
+         "name": "crud-container"
+ 
+     }
+ ],
+     "ContainerDefinition": [
+         {
+         "name": "crud-container",
+         "image": "",
+         "cpu": 1024,
+         "memory": 2048,
+         "essential": true,
+         "mountPoints":[
+             {
+               "sourceVolumes": "crud-data",
+               "containerPath": "/var/app/current/nodejsbasic"
+             }
+         ],
+         "portMappings":[
+             {
+               "appProtocol": "HTTP",
+               "containerPort": 8000,
+               "hostPort":8000
+             }
+         ],
+         "enviroment":[
+             {
+               "name": "DB_HOST",
+               "value": ""
+             },
+             {
+               "name": "DB_USER",
+               "value": "admin"
+             },
+             {
+               "name": "DB_PASSWORD",
+               "value": "ambatukam"
+             },
+             {
+               "name": "DB_DATABASE",
+               "value": "crud_db"
+             }
+ 
+         ]
+     }
+  ]
+ }
